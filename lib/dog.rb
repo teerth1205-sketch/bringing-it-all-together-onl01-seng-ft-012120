@@ -32,6 +32,13 @@ def self.new_from_db(row)
   breed = row[2] 
   Dog.new(id: id, name: name, breed: breed)
 end 
+
+def self.find_by_name(name)
+  sql = "SELECT * FROM dogs WHERE name = ?"
+  dog  = DB[:conn].execute(sql, name)[0]
+  Dog.new_from_db(dog)
+
+end 
   
   
 
