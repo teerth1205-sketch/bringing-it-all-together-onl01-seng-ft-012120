@@ -21,4 +21,6 @@ def self.drop_table
    DB[:conn].execute(sql)
 end 
   
+def save 
+  sql = "INSERT INTO dogs (name, breed)"
 end 
