@@ -58,7 +58,7 @@ def self.create(name:, breed:)
  dog
 end 
   
-def self.
+def self.find_or_create_by
   
 
 end 
