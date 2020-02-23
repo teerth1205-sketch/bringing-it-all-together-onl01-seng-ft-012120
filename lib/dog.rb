@@ -27,9 +27,9 @@ def save
  end 
  
 def self.new_from_db(row)
-  row[0] = id 
-  row[1] = name 
-  row[2] = breed
+  id = row[0]  
+  name = row[1]  
+  breed = row[2] 
   Dog.new(id: id, name: name, breed: breed)
 end 
   
