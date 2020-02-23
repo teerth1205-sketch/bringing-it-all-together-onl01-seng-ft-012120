@@ -73,7 +73,7 @@ def self.find_by_id(id)
   sql = "SELECT id FROM dogs WHERE id = ?"
 dog = DB[:conn].execute(sql, id)
   dogs = Dog.new_from_db(dog)
-  dogs[0]
+
   
 end 
 
