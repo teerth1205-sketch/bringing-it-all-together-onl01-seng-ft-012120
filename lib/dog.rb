@@ -29,7 +29,7 @@ def save
    DB[:conn].execute(sql, self.name, self.breed)
    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
  end
- 
+ Dog.new(id: self.id, name: self.name, breed: self.breed) 
  end 
  
 def self.new_from_db(row)
