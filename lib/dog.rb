@@ -25,4 +25,14 @@ def save
   sql = "INSERT INTO dogs (name, breed) VALUES (?, ?)"
    DB[:conn].execute(sql, self.name, self.breed)
  end 
+ 
+def self.new_from_db(row)
+  row[0] = id 
+  row[1] = name 
+  row[2] = breed
+  Dog.new(id: id, name: name, breed: breed)
+end 
+  
+  
+end 
 end 
