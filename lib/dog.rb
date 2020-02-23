@@ -51,7 +51,8 @@ def update
   
 end 
 
-def self.create()
+def self.create(name:, breed:)
+  Dog.new(name:)
   
   
   
