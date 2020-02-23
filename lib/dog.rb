@@ -40,7 +40,11 @@ def self.find_by_name(name)
 
 end 
   
-def update
+def update(name, breed)
+  sql = "UPDATE "
+  
+  
+end 
   
 
 end 
