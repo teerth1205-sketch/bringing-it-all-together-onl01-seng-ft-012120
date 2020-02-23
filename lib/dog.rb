@@ -22,8 +22,12 @@ def self.drop_table
 end 
   
 def save 
+  if self.id 
+    self.update
+  else 
   sql = "INSERT INTO dogs (name, breed) VALUES (?, ?)"
    DB[:conn].execute(sql, self.name, self.breed)
+   
  end 
  
 def self.new_from_db(row)
