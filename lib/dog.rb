@@ -22,5 +22,7 @@ def self.drop_table
 end 
   
 def save 
-  sql = "INSERT INTO dogs (name, breed)"
+  sql = "INSERT INTO dogs (name, breed) VALUES (?, ?)"
+   DB[:conn].execute(sql, self.name, self.breed)
+ end 
 end 
